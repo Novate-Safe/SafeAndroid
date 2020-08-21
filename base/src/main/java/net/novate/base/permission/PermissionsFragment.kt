@@ -37,7 +37,7 @@ internal class PermissionsFragment : Fragment() {
             requests.remove(requestCode)
             onResult(permissions.mapIndexed { index, permission ->
                 if (permissions.size != results.size) {
-                    CANCEL
+                    CANCELED
                 } else {
                     if (results[index] == GRANTED) {
                         GRANTED
@@ -45,7 +45,7 @@ internal class PermissionsFragment : Fragment() {
                         if (ActivityCompat.shouldShowRequestPermissionRationale(requireActivity(), permission)) {
                             DENIED
                         } else {
-                            IGNORE
+                            IGNORED
                         }
                     }
                 }

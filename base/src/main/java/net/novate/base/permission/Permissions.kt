@@ -11,8 +11,8 @@ import androidx.fragment.app.FragmentActivity
 
 const val GRANTED = PackageManager.PERMISSION_GRANTED
 const val DENIED = PackageManager.PERMISSION_DENIED
-const val IGNORE = -2
-const val CANCEL = -3
+const val IGNORED = -2
+const val CANCELED = -3
 
 fun Context.hasPermissions(vararg permissions: String) = permissions.all { ActivityCompat.checkSelfPermission(this, it) == GRANTED }
 
