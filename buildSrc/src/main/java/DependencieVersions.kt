@@ -35,6 +35,9 @@ const val hiltOptionalVersion = "1.0.0-alpha02"
 // Timber
 const val timberVersion = "4.7.1"
 
+// Okio
+const val okioVersion = "2.8.0"
+
 // test
 const val junitVersion = "4.13"
 

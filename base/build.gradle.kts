@@ -46,6 +46,9 @@ dependencies {
     // Timber
     implementation("com.jakewharton.timber:timber:$timberVersion")
 
+    // Okio
+    implementation("com.squareup.okio:okio:$okioVersion")
+
     // Test
     testImplementation("junit:junit:$junitVersion")
 
