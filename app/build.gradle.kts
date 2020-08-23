@@ -122,6 +122,9 @@ dependencies {
     // Okio
     implementation("com.squareup.okio:okio:$okioVersion")
 
+    // material
+    implementation("com.google.android.material:material:$materialVersion")
+
     // Test
     testImplementation("junit:junit:$junitVersion")
 
