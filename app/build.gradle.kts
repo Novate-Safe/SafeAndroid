@@ -49,7 +49,6 @@ dependencies {
 
     // Androidx
     implementation("androidx.appcompat:appcompat:$androidxAppcompatVersion")
-    implementation("androidx.constraintlayout:constraintlayout:$androidxConstraintlayoutVersion")
 
     // Androidx Ktx
     implementation("androidx.core:core-ktx:$androidxCoreKtxVersion")
@@ -122,8 +121,10 @@ dependencies {
     // Okio
     implementation("com.squareup.okio:okio:$okioVersion")
 
-    // material
+    // Ui
     implementation("com.google.android.material:material:$materialVersion")
+    implementation("androidx.constraintlayout:constraintlayout:$androidxConstraintlayoutVersion")
+    implementation("androidx.viewpager2:viewpager2:$androidxViewpager2Version")
 
     // Test
     testImplementation("junit:junit:$junitVersion")

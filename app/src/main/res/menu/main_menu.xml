@@ -6,11 +6,6 @@
         android:title="@string/main_menu_home" />
 
     <item
-        android:id="@+id/category"
-        android:icon="@drawable/ic_main_menu_category"
-        android:title="@string/main_menu_category" />
-
-    <item
         android:id="@+id/dynamic"
         android:icon="@drawable/ic_main_menu_dynamic"
         android:title="@string/main_menu_dynamic" />

@@ -6,7 +6,6 @@ const val kotlinVersion = "1.3.72"
 
 // Androidx
 const val androidxAppcompatVersion = "1.2.0"
-const val androidxConstraintlayoutVersion = "1.1.3"
 
 // Androidx Ktx
 const val androidxCoreKtxVersion = "1.3.1"
@@ -38,8 +37,10 @@ const val timberVersion = "4.7.1"
 // Okio
 const val okioVersion = "2.8.0"
 
-// Ui - material
+// Ui
 const val materialVersion = "1.2.0"
+const val androidxConstraintlayoutVersion = "2.0.0"
+const val androidxViewpager2Version = "1.0.0"
 
 // test
 const val junitVersion = "4.13"

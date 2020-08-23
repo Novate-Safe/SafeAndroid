@@ -46,8 +46,8 @@ dependencies {
     // Timber
     implementation("com.jakewharton.timber:timber:$timberVersion")
 
-    // Okio
-    implementation("com.squareup.okio:okio:$okioVersion")
+    // Ui
+    implementation("androidx.viewpager2:viewpager2:$androidxViewpager2Version")
 
     // Test
     testImplementation("junit:junit:$junitVersion")
