@@ -9,15 +9,25 @@
         android:fitsSystemWindows="true"
         tools:context=".MainActivity">
 
-        <FrameLayout
-            android:id="@+id/container"
+        <!--        <FrameLayout-->
+        <!--            android:id="@+id/container"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="0dp"-->
+        <!--            app:layout_constraintBottom_toTopOf="@id/navigation"-->
+        <!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+        <fragment
+            android:id="@+id/navigationHost"
+            android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toTopOf="@id/navigation"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:defaultNavHost="true"
+            app:layout_constraintBottom_toTopOf="@id/navigationView"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navGraph="@navigation/main_navigation" />
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/navigation"
+            android:id="@+id/navigationView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/white"
