@@ -54,6 +54,7 @@ dependencies {
     implementation("androidx.core:core-ktx:$androidxCoreKtxVersion")
     implementation("androidx.fragment:fragment-ktx:$androidxFragmentKtxVersion")
     implementation("androidx.collection:collection-ktx:$androidxCollectionKtxVersion")
+    implementation("androidx.startup:startup-runtime:$androidxStartupVersion")
 
     // Lifecycle
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:$androidxLifecycleVersion")

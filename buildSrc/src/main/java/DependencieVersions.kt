@@ -6,6 +6,7 @@ const val kotlinVersion = "1.3.72"
 
 // Androidx
 const val androidxAppcompatVersion = "1.2.0"
+const val androidxStartupVersion = "1.0.0-alpha03"
 
 // Androidx Ktx
 const val androidxCoreKtxVersion = "1.3.1"

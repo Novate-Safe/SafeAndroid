@@ -42,6 +42,7 @@ dependencies {
     implementation("androidx.core:core-ktx:$androidxCoreKtxVersion")
     implementation("androidx.appcompat:appcompat:$androidxAppcompatVersion")
     implementation("androidx.constraintlayout:constraintlayout:$androidxConstraintlayoutVersion")
+    implementation("androidx.startup:startup-runtime:$androidxStartupVersion")
 
     // Timber
     implementation("com.jakewharton.timber:timber:$timberVersion")

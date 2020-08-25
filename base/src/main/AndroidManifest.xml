@@ -1,13 +1,19 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="net.novate.base">
 
     <application>
         <provider
-            android:name=".timber.TimberInitializer"
-            android:authorities="${applicationId}.timber.TimberInitializer"
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
             android:exported="false"
-            android:initOrder="@integer/base_init_order_timber_initializer"
-            android:multiprocess="true" />
+            android:multiprocess="true"
+            tools:node="merge">
+
+            <meta-data
+                android:name="net.novate.base.timber.TimberInitializer"
+                android:value="androidx.startup" />
+        </provider>
     </application>
 
 </manifest>
