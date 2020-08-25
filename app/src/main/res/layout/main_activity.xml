@@ -9,28 +9,15 @@
         android:fitsSystemWindows="true"
         tools:context=".MainActivity">
 
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/white"
-            app:layout_constraintTop_toTopOf="parent"
-            app:menu="@menu/home_menu"
-            app:title="@string/main_menu_home"
-            app:titleTextColor="@color/colorPrimary" />
-        <!--android:elevation="4dp"-->
-
-
-        <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/viewPager"
+        <FrameLayout
+            android:id="@+id/container"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:nestedScrollingEnabled="true"
-            app:layout_constraintBottom_toTopOf="@id/bottomNavigationView"
-            app:layout_constraintTop_toBottomOf="@id/toolbar" />
+            app:layout_constraintBottom_toTopOf="@id/navigation"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottomNavigationView"
+            android:id="@+id/navigation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/white"
