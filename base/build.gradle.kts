@@ -44,6 +44,14 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:$androidxConstraintlayoutVersion")
     implementation("androidx.startup:startup-runtime:$androidxStartupVersion")
 
+    // Navigation
+    implementation("androidx.navigation:navigation-ui-ktx:$androidxNavigationVersion")
+    implementation("androidx.navigation:navigation-fragment-ktx:$androidxNavigationVersion")
+    // optional - Dynamic Feature Module Support
+    implementation("androidx.navigation:navigation-dynamic-features-fragment:$androidxNavigationVersion")
+    // optional - Test helpers
+    androidTestImplementation("androidx.navigation:navigation-testing:$androidxNavigationVersion")
+
     // Timber
     implementation("com.jakewharton.timber:timber:$timberVersion")
 

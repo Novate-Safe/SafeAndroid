@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_navigation"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/password">
 
     <fragment
-        android:id="@+id/homeFragment"
-        android:name="net.novate.safe.HomeFragment"
-        android:label="HomeFragment" />
+        android:id="@+id/password"
+        android:name="net.novate.safe.ui.password.PasswordFragment"
+        tools:layout="@layout/password_fragment" />
+
     <fragment
-        android:id="@+id/dynamicFragment"
-        android:name="net.novate.safe.DynamicFragment"
-        android:label="DynamicFragment" />
+        android:id="@+id/dynamic"
+        android:name="net.novate.safe.ui.dynamic.DynamicFragment"
+        tools:layout="@layout/dynamic_fragment" />
+
     <fragment
-        android:id="@+id/mineFragment"
-        android:name="net.novate.safe.MineFragment"
-        android:label="MineFragment" />
+        android:id="@+id/mine"
+        android:name="net.novate.safe.ui.mine.MineFragment"
+        tools:layout="@layout/mine_fragment" />
 </navigation>

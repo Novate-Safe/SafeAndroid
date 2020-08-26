@@ -8,4 +8,4 @@ import androidx.databinding.ViewDataBinding
 /**
  * TODO
  */
-inline fun <reified T : ViewDataBinding> Activity.bindContentView(@LayoutRes layoutId: Int) = DataBindingUtil.setContentView<T>(this, layoutId)
+fun <T : ViewDataBinding> Activity.bindContentView(@LayoutRes layoutId: Int): T = DataBindingUtil.setContentView(this, layoutId)

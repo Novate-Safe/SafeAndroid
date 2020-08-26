@@ -1,5 +1,4 @@
 <resources>
-    <!-- Base application theme. -->
     <style name="AppTheme.Light" parent="BaseTheme.Light">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
