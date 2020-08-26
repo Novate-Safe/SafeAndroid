@@ -1,4 +1,4 @@
-package net.novate.base.view
+package net.novate.base.widget
 
 /*
  * Copyright 2019 The Android Open Source Project
