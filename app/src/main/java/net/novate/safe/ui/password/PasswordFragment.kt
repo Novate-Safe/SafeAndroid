@@ -1,4 +1,4 @@
-package net.novate.safe
+package net.novate.safe.ui.password
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,17 +7,17 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.google.android.material.tabs.TabLayoutMediator
 import net.novate.base.simple.SimpleFragmentStateAdapter
-import net.novate.safe.databinding.HomeFragmentBinding
+import net.novate.safe.databinding.PasswordFragmentBinding
 
 /**
  * TODO
  */
-class HomeFragment : Fragment() {
+class PasswordFragment : Fragment() {
 
-    private lateinit var binding: HomeFragmentBinding
+    private lateinit var binding: PasswordFragmentBinding
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        binding = HomeFragmentBinding.inflate(inflater, container, false)
+        binding = PasswordFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }
 

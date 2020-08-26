@@ -1,4 +1,4 @@
-package net.novate.safe
+package net.novate.safe.ui.password
 
 import android.os.Bundle
 import android.view.LayoutInflater

@@ -1,21 +1,21 @@
-package net.novate.safe
+package net.novate.safe.ui.dynamic
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import net.novate.safe.databinding.MineFragmentBinding
+import net.novate.safe.databinding.DynamicFragmentBinding
 
 /**
  * TODO
  */
-class MineFragment : Fragment() {
+class DynamicFragment : Fragment() {
 
-    private lateinit var binding: MineFragmentBinding
+    private lateinit var binding: DynamicFragmentBinding
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        binding = MineFragmentBinding.inflate(inflater, container, false)
+        binding = DynamicFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }
 }
