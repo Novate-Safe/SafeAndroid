@@ -4,9 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import com.google.android.material.tabs.TabLayoutMediator
 import net.novate.base.simple.SimpleFragmentStateAdapter
+import net.novate.base.view.findParent
+import net.novate.safe.R
 import net.novate.safe.databinding.PasswordFragmentBinding
 
 /**
@@ -23,6 +26,13 @@ class PasswordFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.toolbar.findParent<DrawerLayout>()?.let { drawerLayout ->
+            binding.toolbar.navigationIcon = resources.getDrawable(R.drawable.ic_menu, null)
+            binding.toolbar.setNavigationOnClickListener {
+                drawerLayout.open()
+            }
+        }
 
         binding.viewPager.adapter = SimpleFragmentStateAdapter(this, PasswordsFragment(), PasswordsFragment(), PasswordsFragment(), PasswordsFragment(), PasswordsFragment(), PasswordsFragment())
 
