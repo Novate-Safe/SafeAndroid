@@ -18,7 +18,7 @@ class NavigationActivity : AppCompatActivity() {
         window.appearBehindStatusBar = true
         window.appearBehindNavigationBar = true
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.navigtion_activity)
+        setContentView(R.layout.navigation_activity)
     }
 
 }
