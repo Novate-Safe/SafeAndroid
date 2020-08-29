@@ -38,8 +38,16 @@ const val timberVersion = "4.7.1"
 // Okio
 const val okioVersion = "2.8.0"
 
+// ReactiveX
+const val rxJava2Version = "2.2.19"
+const val rxKotlin2Version = "2.4.0"
+const val rxAndroid2Version = "2.1.1"
+const val rxJava3Version = "3.0.6"
+const val rxKotlin3Version = "3.0.0"
+const val rxAndroid3Version = "3.0.0"
+
 // Ui
-const val materialVersion = "1.2.0"
+const val materialVersion = "1.3.0-alpha02"
 const val androidxConstraintlayoutVersion = "2.0.0"
 const val androidxViewpager2Version = "1.0.0"
 

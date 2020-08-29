@@ -122,6 +122,11 @@ dependencies {
     // Okio
     implementation("com.squareup.okio:okio:$okioVersion")
 
+    // ReactiveX
+    implementation("io.reactivex.rxjava3:rxjava:$rxJava3Version")
+    implementation("io.reactivex.rxjava3:rxkotlin:$rxKotlin3Version")
+    implementation("io.reactivex.rxjava3:rxandroid:$rxAndroid3Version")
+
     // Ui
     implementation("com.google.android.material:material:$materialVersion")
     implementation("androidx.constraintlayout:constraintlayout:$androidxConstraintlayoutVersion")

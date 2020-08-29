@@ -29,6 +29,11 @@ android {
         }
     }
 
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
@@ -54,6 +59,11 @@ dependencies {
 
     // Timber
     implementation("com.jakewharton.timber:timber:$timberVersion")
+
+    // ReactiveX
+    implementation("io.reactivex.rxjava3:rxjava:$rxJava3Version")
+    implementation("io.reactivex.rxjava3:rxkotlin:$rxKotlin3Version")
+    implementation("io.reactivex.rxjava3:rxandroid:$rxAndroid3Version")
 
     // Ui
     implementation("androidx.viewpager2:viewpager2:$androidxViewpager2Version")

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="BaseTheme.Light" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="BaseTheme.Light" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
         <item name="android:windowBackground">@android:color/white</item>
@@ -9,7 +9,7 @@
         <item name="android:windowLightNavigationBar">true</item>
     </style>
 
-    <style name="BaseTheme.Night" parent="Theme.AppCompat.DayNight.NoActionBar">
+    <style name="BaseTheme.Night" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
         <item name="android:windowBackground">@android:color/black</item>
