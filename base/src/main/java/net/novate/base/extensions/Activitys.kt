@@ -1,4 +1,4 @@
-package net.novate.base.binding
+package net.novate.base.extensions
 
 import android.app.Activity
 import androidx.annotation.LayoutRes

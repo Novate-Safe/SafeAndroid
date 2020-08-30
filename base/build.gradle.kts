@@ -57,6 +57,25 @@ dependencies {
     // optional - Test helpers
     androidTestImplementation("androidx.navigation:navigation-testing:$androidxNavigationVersion")
 
+    // Paging
+    implementation("androidx.paging:paging-runtime:$androidxPagingVersion")
+    // optional - RxJava2 support
+    implementation("androidx.paging:paging-rxjava2:$androidxPagingVersion")
+    // optional - Guava ListenableFuture support
+    implementation("androidx.paging:paging-guava:$androidxPagingVersion")
+
+    // Room
+    implementation("androidx.room:room-runtime:$androidxRoomVersion")
+    kapt("androidx.room:room-compiler:$androidxRoomVersion")
+    // optional - Kotlin Extensions and Coroutines support for Room
+    implementation("androidx.room:room-ktx:$androidxRoomVersion")
+    // optional - RxJava support for Room
+    implementation("androidx.room:room-rxjava2:$androidxRoomVersion")
+    // optional - Guava support for Room, including Optional and ListenableFuture
+    implementation("androidx.room:room-guava:$androidxRoomVersion")
+    // optional - Test helpers
+    testImplementation("androidx.room:room-testing:$androidxRoomVersion")
+
     // Timber
     implementation("com.jakewharton.timber:timber:$timberVersion")
 

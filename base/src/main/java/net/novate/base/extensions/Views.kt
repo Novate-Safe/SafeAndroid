@@ -1,4 +1,4 @@
-package net.novate.base.view
+package net.novate.base.extensions
 
 import android.view.View
 import android.view.ViewParent

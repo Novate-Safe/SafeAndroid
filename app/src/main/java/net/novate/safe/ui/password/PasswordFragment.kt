@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import com.google.android.material.tabs.TabLayoutMediator
+import net.novate.base.extensions.findParent
 import net.novate.base.simple.SimpleFragmentStateAdapter
-import net.novate.base.view.findParent
 import net.novate.safe.R
 import net.novate.safe.databinding.PasswordFragmentBinding
 

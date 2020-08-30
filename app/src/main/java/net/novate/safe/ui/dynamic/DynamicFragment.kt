@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
-import net.novate.base.view.findParent
+import net.novate.base.extensions.findParent
 import net.novate.safe.R
 import net.novate.safe.databinding.DynamicFragmentBinding
 

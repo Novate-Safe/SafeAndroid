@@ -2,6 +2,7 @@ package net.novate.base.view.recyclerview
 
 import android.graphics.Point
 import android.graphics.Rect
+import android.util.LayoutDirection
 import android.view.View
 import androidx.annotation.CheckResult
 import androidx.annotation.Dimension
@@ -9,7 +10,7 @@ import androidx.annotation.IntRange
 import androidx.recyclerview.widget.RecyclerView
 
 /**
- * 网格间隙装饰器；暂未适配反向布局；注意上下左右的间距不可以一侧设置过分离谱，会导致无法均分 Item
+ * 网格间隙装饰器
  */
 class GridLayoutSpacingItemDecoration(
     @IntRange(from = 1) private var spanCount: Int,
@@ -95,6 +96,10 @@ class GridLayoutSpacingItemDecoration(
                     }
                 }
             }
+            if (parent.layoutDirection == LayoutDirection.RTL) {
+                // 适配从右向左的布局
+                outRect.left = outRect.right.also { outRect.right = outRect.left }
+            }
         }
     }
 
@@ -114,29 +119,15 @@ class GridLayoutSpacingItemDecoration(
         @Dimension horizontalInnerSpacing: Float = 0f,
         @Dimension verticalInnerSpacing: Float = 0f
     ): Boolean {
-        return if (this == GridLayoutSpacingItemDecoration(
-                spanCount,
-                orientation,
-                startSpacing,
-                topSpacing,
-                endSpacing,
-                bottomSpacing,
-                horizontalInnerSpacing,
-                verticalInnerSpacing
-            )
-        ) {
-            false
-        } else {
-            this.spanCount = spanCount
-            this.orientation = orientation
-            this.startSpacing = startSpacing
-            this.topSpacing = topSpacing
-            this.endSpacing = endSpacing
-            this.bottomSpacing = bottomSpacing
-            this.horizontalInnerSpacing = horizontalInnerSpacing
-            this.verticalInnerSpacing = verticalInnerSpacing
-            true
-        }
+        var same = (this.spanCount == spanCount).also { if (!it) this.spanCount = spanCount }
+        same = (this.orientation == orientation).also { if (!it) this.orientation = orientation } && same
+        same = (this.startSpacing == startSpacing).also { if (!it) this.startSpacing = startSpacing } && same
+        same = (this.topSpacing == topSpacing).also { if (!it) this.topSpacing = topSpacing } && same
+        same = (this.endSpacing == endSpacing).also { if (!it) this.endSpacing = endSpacing } && same
+        same = (this.bottomSpacing == bottomSpacing).also { if (!it) this.bottomSpacing = bottomSpacing } && same
+        same = (this.horizontalInnerSpacing == horizontalInnerSpacing).also { if (!it) this.horizontalInnerSpacing = horizontalInnerSpacing } && same
+        same = (this.verticalInnerSpacing == verticalInnerSpacing).also { if (!it) this.verticalInnerSpacing = verticalInnerSpacing } && same
+        return same
     }
 
     /**
@@ -165,35 +156,5 @@ class GridLayoutSpacingItemDecoration(
         } else {
             Point(this / spanCount, this % spanCount)
         }
-    }
-
-    override fun equals(other: Any?): Boolean {
-        if (this === other) return true
-        if (javaClass != other?.javaClass) return false
-
-        other as GridLayoutSpacingItemDecoration
-
-        if (spanCount != other.spanCount) return false
-        if (orientation != other.orientation) return false
-        if (startSpacing != other.startSpacing) return false
-        if (topSpacing != other.topSpacing) return false
-        if (endSpacing != other.endSpacing) return false
-        if (bottomSpacing != other.bottomSpacing) return false
-        if (horizontalInnerSpacing != other.horizontalInnerSpacing) return false
-        if (verticalInnerSpacing != other.verticalInnerSpacing) return false
-
-        return true
-    }
-
-    override fun hashCode(): Int {
-        var result = spanCount
-        result = 31 * result + orientation
-        result = 31 * result + startSpacing.hashCode()
-        result = 31 * result + topSpacing.hashCode()
-        result = 31 * result + endSpacing.hashCode()
-        result = 31 * result + bottomSpacing.hashCode()
-        result = 31 * result + horizontalInnerSpacing.hashCode()
-        result = 31 * result + verticalInnerSpacing.hashCode()
-        return result
     }
 }

@@ -1,13 +1,14 @@
 package net.novate.base.view.recyclerview
 
 import android.graphics.Rect
+import android.util.LayoutDirection
 import android.view.View
 import androidx.annotation.CheckResult
 import androidx.annotation.Dimension
 import androidx.recyclerview.widget.RecyclerView
 
 /**
- * 线型间隙装饰器；暂未适配反向布局
+ * 线型间隙装饰器
  */
 class LinearLayoutSpacingItemDecoration(
     @RecyclerView.Orientation private var orientation: Int = RecyclerView.VERTICAL,
@@ -51,6 +52,10 @@ class LinearLayoutSpacingItemDecoration(
                     }
                 }
             }
+            if (parent.layoutDirection == LayoutDirection.RTL) {
+                // 适配从右向左的布局
+                outRect.left = outRect.right.also { outRect.right = outRect.left }
+            }
         }
     }
 
@@ -68,52 +73,12 @@ class LinearLayoutSpacingItemDecoration(
         @Dimension bottomSpacing: Float = 0f,
         @Dimension innerSpacing: Float = 0f
     ): Boolean {
-        return if (this == LinearLayoutSpacingItemDecoration(
-                orientation,
-                startSpacing,
-                topSpacing,
-                endSpacing,
-                bottomSpacing,
-                innerSpacing
-            )
-        ) {
-            false
-        } else {
-            this.orientation = orientation
-            this.startSpacing = startSpacing
-            this.topSpacing = topSpacing
-            this.endSpacing = endSpacing
-            this.bottomSpacing = bottomSpacing
-            this.innerSpacing = innerSpacing
-            true
-        }
+        var same = (this.orientation == orientation).also { if (!it) this.orientation = orientation }
+        same = (this.startSpacing == startSpacing).also { if (!it) this.startSpacing = startSpacing } && same
+        same = (this.topSpacing == topSpacing).also { if (!it) this.topSpacing = topSpacing } && same
+        same = (this.endSpacing == endSpacing).also { if (!it) this.endSpacing = endSpacing } && same
+        same = (this.bottomSpacing == bottomSpacing).also { if (!it) this.bottomSpacing = bottomSpacing } && same
+        same = (this.innerSpacing == innerSpacing).also { if (!it) this.innerSpacing = innerSpacing } && same
+        return same
     }
-
-    override fun equals(other: Any?): Boolean {
-        if (this === other) return true
-        if (javaClass != other?.javaClass) return false
-
-        other as LinearLayoutSpacingItemDecoration
-
-        if (orientation != other.orientation) return false
-        if (startSpacing != other.startSpacing) return false
-        if (topSpacing != other.topSpacing) return false
-        if (endSpacing != other.endSpacing) return false
-        if (bottomSpacing != other.bottomSpacing) return false
-        if (innerSpacing != other.innerSpacing) return false
-
-        return true
-    }
-
-    override fun hashCode(): Int {
-        var result = orientation
-        result = 31 * result + startSpacing.hashCode()
-        result = 31 * result + topSpacing.hashCode()
-        result = 31 * result + endSpacing.hashCode()
-        result = 31 * result + bottomSpacing.hashCode()
-        result = 31 * result + innerSpacing.hashCode()
-        return result
-    }
-
-
 }

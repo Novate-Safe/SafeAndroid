@@ -87,6 +87,6 @@ class PasswordsFragment : Fragment() {
             "密码",
             "密码",
             "密码"
-        )
+        ).mapIndexed { index, s -> "$index $s" }
     }
 }

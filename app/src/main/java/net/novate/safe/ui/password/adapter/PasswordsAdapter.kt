@@ -10,11 +10,11 @@ import net.novate.safe.databinding.PasswordItemBinding
  */
 class PasswordsAdapter : BaseBindingAdapter<String, PasswordItemBinding>() {
 
-    override fun onCreateViewDataBinding(inflater: LayoutInflater, parent: ViewGroup, viewType: Int): PasswordItemBinding {
+    override fun onCreateViewBinding(inflater: LayoutInflater, parent: ViewGroup, viewType: Int): PasswordItemBinding {
         return PasswordItemBinding.inflate(inflater, parent, false)
     }
 
-    override fun onBindViewDataBinding(binding: PasswordItemBinding, item: String, position: Int) {
+    override fun onBindViewBinding(binding: PasswordItemBinding, item: String, position: Int) {
         binding.password = item
     }
 
