@@ -4,10 +4,14 @@ import androidx.annotation.Dimension
 import androidx.annotation.IntRange
 import androidx.databinding.BindingAdapter
 import androidx.databinding.ViewDataBinding
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.coroutineScope
+import androidx.paging.PagingData
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import net.novate.base.base.BaseBindingAdapter
+import net.novate.base.base.BasePagingAdapter
 import net.novate.base.view.recyclerview.GridLayoutSpacingItemDecoration
 import net.novate.base.view.recyclerview.LinearLayoutSpacingItemDecoration
 
@@ -17,6 +21,18 @@ import net.novate.base.view.recyclerview.LinearLayoutSpacingItemDecoration
 @BindingAdapter("adapter", "data", requireAll = false)
 fun <D, B : ViewDataBinding> RecyclerView.setData(adapter: BaseBindingAdapter<D, B>, data: List<D>? = null) {
     adapter.data = data ?: listOf()
+    if (this.adapter !== adapter) {
+        this.adapter = adapter
+    }
+}
+
+
+@BindingAdapter("lifecycle", "adapter", "data", requireAll = false)
+fun <D : Any, B : ViewDataBinding> RecyclerView.setData(lifecycle: Lifecycle, adapter: BasePagingAdapter<D, B>, data: PagingData<D>?) {
+    // TODO: 2020/8/31 此处有问题 不应该频繁 launch
+    lifecycle.coroutineScope.launchWhenCreated {
+        data?.let { adapter.submitData(data) }
+    }
     if (this.adapter !== adapter) {
         this.adapter = adapter
     }

@@ -3,7 +3,6 @@ package net.novate.base.base
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.ViewDataBinding
-import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 
@@ -14,6 +13,11 @@ interface DiffCalculator<T> {
     fun areItemsTheSame(old: T, new: T): Boolean
     fun areContentsTheSame(old: T, new: T): Boolean
     fun getChangePayload(old: T, new: T): Any? = null
+}
+
+object StringDiffCalculator : DiffCalculator<String> {
+    override fun areItemsTheSame(old: String, new: String) = old == new
+    override fun areContentsTheSame(old: String, new: String) = old == new
 }
 
 interface DiffCalculable<T> {
@@ -33,38 +37,6 @@ class DiffCalculableCallback<T : DiffCalculable<T>> : DiffUtil.ItemCallback<T>()
     override fun areContentsTheSame(oldItem: T, newItem: T): Boolean = oldItem.isContentSameWith(newItem)
     override fun getChangePayload(oldItem: T, newItem: T): Any? = oldItem.getChangePayload(newItem)
 }
-
-abstract class BasePagingAdapter<D : Any, B : ViewDataBinding>(diffCalculator: DiffCalculator<D>) : PagingDataAdapter<D, BaseBindingViewHolder<B>>(DiffCalculatorCallback(diffCalculator)) {
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseBindingViewHolder<B> {
-        return BaseBindingViewHolder(onCreateViewBinding(LayoutInflater.from(parent.context), parent, viewType))
-    }
-
-    override fun onBindViewHolder(holder: BaseBindingViewHolder<B>, position: Int) {
-        onBindViewBinding(holder.binding, getItem(position), position)
-        holder.binding.executePendingBindings()
-    }
-
-    protected abstract fun onCreateViewBinding(inflater: LayoutInflater, parent: ViewGroup, viewType: Int): B
-
-    protected abstract fun onBindViewBinding(binding: B, item: D?, position: Int)
-}
-
-abstract class BasePagingDiffAdapter<D : DiffCalculable<D>, B : ViewDataBinding> : PagingDataAdapter<D, BaseBindingViewHolder<B>>(DiffCalculableCallback()) {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseBindingViewHolder<B> {
-        return BaseBindingViewHolder(onCreateViewBinding(LayoutInflater.from(parent.context), parent, viewType))
-    }
-
-    override fun onBindViewHolder(holder: BaseBindingViewHolder<B>, position: Int) {
-        onBindViewBinding(holder.binding, getItem(position), position)
-        holder.binding.executePendingBindings()
-    }
-
-    protected abstract fun onCreateViewBinding(inflater: LayoutInflater, parent: ViewGroup, viewType: Int): B
-
-    protected abstract fun onBindViewBinding(binding: B, item: D?, position: Int)
-}
-
 
 abstract class BaseBindingAdapter<D, B : ViewDataBinding> : RecyclerView.Adapter<BaseBindingViewHolder<B>>(), DiffCalculator<D> {
 

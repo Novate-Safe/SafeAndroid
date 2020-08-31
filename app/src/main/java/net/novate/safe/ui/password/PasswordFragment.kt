@@ -34,10 +34,10 @@ class PasswordFragment : Fragment() {
             }
         }
 
-        binding.viewPager.adapter = SimpleFragmentStateAdapter(this, PasswordsFragment(), PasswordsFragment(), PasswordsFragment(), PasswordsFragment(), PasswordsFragment(), PasswordsFragment())
+        binding.viewPager.adapter = SimpleFragmentStateAdapter(this, PasswordsFragment(), PasswordsFragment())
 
         TabLayoutMediator(binding.tabLayout, binding.viewPager) { tab, position ->
-            tab.text = listOf("全部", "收藏", "支付", "社交", "游戏", "其他")[position]
+            tab.text = listOf("全部", "收藏")[position]
         }.attach()
     }
 }
