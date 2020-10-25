@@ -1,31 +1,39 @@
 package net.novate.base.extension
 
+import net.novate.base.tuple.Single
 import java.lang.ref.ReferenceQueue
 import java.lang.ref.WeakReference
-import java.util.*
 import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.ConcurrentMap
-import kotlin.NoSuchElementException
 
 /**
  * 扩展属性映射表，映射对象和其额外属性表
  */
-private val EXTENSIONS by lazy { ConcurrentWeakIdentityHashMap<Any, MutableMap<String, Optional<Any?>>>() }
+private val EXTENSIONS by lazy {
+    ConcurrentWeakIdentityHashMap<Any, MutableMap<String, Single<Any?>>>()
+}
 
 /**
  * 设置属性
  */
-@Suppress("UNCHECKED_CAST")
-fun Any.setExtension(name: String, value: Any?, extensions: MutableMap<String, Optional<Any?>> = EXTENSIONS.getOrPut(this) { ConcurrentHashMap() }) {
-    extensions[name] = Optional.ofNullable(value) as Optional<Any?>
+fun Any.setExtension(
+    name: String,
+    value: Any?,
+    extensions: MutableMap<String, Single<Any?>> = EXTENSIONS.getOrPut(this) { ConcurrentHashMap() }
+) {
+    extensions[name] = Single(value)
 }
 
 /**
  * 获取属性
  */
 @Suppress("UNCHECKED_CAST")
-fun <T> Any.getExtension(name: String, extensions: MutableMap<String, Optional<Any?>> = EXTENSIONS.getOrPut(this) { ConcurrentHashMap() }, default: () -> T): T {
-    return (extensions.getOrPut(name) { Optional.ofNullable(default()) as Optional<Any?> } as Optional<T>).orElse(null)
+fun <T> Any.getExtension(
+    name: String,
+    extensions: MutableMap<String, Single<Any?>> = EXTENSIONS.getOrPut(this) { ConcurrentHashMap() },
+    default: () -> T
+): T {
+    return extensions.getOrPut(name) { Single(default()) }.value as T
 }
 
 /**

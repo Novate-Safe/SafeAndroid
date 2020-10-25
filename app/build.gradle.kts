@@ -122,6 +122,9 @@ dependencies {
     // Okio
     implementation("com.squareup.okio:okio:$okioVersion")
 
+    // Gson
+    implementation("com.google.code.gson:gson:$gsonVersion")
+
     // ReactiveX
     implementation("io.reactivex.rxjava3:rxjava:$rxJava3Version")
     implementation("io.reactivex.rxjava3:rxkotlin:$rxKotlin3Version")
@@ -129,7 +132,7 @@ dependencies {
 
     // Ui
     implementation("com.google.android.material:material:$materialVersion")
-    implementation("androidx.constraintlayout:constraintlayout:$androidxConstraintlayoutVersion")
+    implementation("androidx.constraintlayout:constraintlayout:$androidxConstraintLayoutVersion")
     implementation("androidx.viewpager2:viewpager2:$androidxViewpager2Version")
 
     // Test

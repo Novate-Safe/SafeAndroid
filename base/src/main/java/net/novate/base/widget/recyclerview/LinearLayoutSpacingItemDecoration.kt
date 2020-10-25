@@ -1,4 +1,4 @@
-package net.novate.base.view.recyclerview
+package net.novate.base.widget.recyclerview
 
 import android.graphics.Rect
 import android.util.LayoutDirection

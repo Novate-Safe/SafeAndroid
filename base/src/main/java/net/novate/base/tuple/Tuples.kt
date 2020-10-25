@@ -1,6 +1,17 @@
 package net.novate.base.tuple
 
 /**
+ * 一元组
+ */
+data class Single<T>(
+    val value: T
+) {
+    override fun toString() = "($value)"
+}
+
+fun <T> Single<T>.toList() = listOf(value)
+
+/**
  * 四元组
  */
 data class Quadruple<A, B, C, D>(

@@ -1,5 +1,6 @@
 package net.novate.base.binding
 
+import android.graphics.drawable.Drawable
 import androidx.annotation.Dimension
 import androidx.annotation.IntRange
 import androidx.databinding.BindingAdapter
@@ -12,8 +13,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import net.novate.base.base.BaseBindingAdapter
 import net.novate.base.base.BasePagingAdapter
-import net.novate.base.view.recyclerview.GridLayoutSpacingItemDecoration
-import net.novate.base.view.recyclerview.LinearLayoutSpacingItemDecoration
+import net.novate.base.widget.recyclerview.GridLayoutSpacingItemDecoration
+import net.novate.base.widget.recyclerview.LinearLayoutDividerItemDecoration
+import net.novate.base.widget.recyclerview.LinearLayoutSpacingItemDecoration
 
 /**
  * 设置 RecyclerView 的数据
@@ -35,6 +37,43 @@ fun <D : Any, B : ViewDataBinding> RecyclerView.setData(lifecycle: Lifecycle, ad
     }
     if (this.adapter !== adapter) {
         this.adapter = adapter
+    }
+}
+
+@BindingAdapter(
+    "linearLayout_orientation",
+    "linearLayout_reverseLayout",
+    "linearLayout_divider",
+    "linearLayout_showLastDivider",
+    requireAll = false
+)
+fun RecyclerView.setLinearLayoutManager(
+    @RecyclerView.Orientation orientation: Int?,
+    reverseLayout: Boolean,
+    divider: Drawable,
+    showLastDivider: Boolean = false
+) {
+    // 设置 LinearLayoutManager
+    layoutManager.apply {
+        if (this is LinearLayoutManager) {
+            setOrientation(orientation ?: RecyclerView.VERTICAL)
+            setReverseLayout(reverseLayout)
+        } else {
+            layoutManager = LinearLayoutManager(context, orientation ?: RecyclerView.VERTICAL, reverseLayout)
+        }
+    }
+    // 设置 LinearLayoutDividerItemDecoration
+    var found = false
+    for (index in 0 until itemDecorationCount) {
+        val itemDecoration = getItemDecorationAt(index)
+        if (itemDecoration is LinearLayoutDividerItemDecoration) {
+            itemDecoration.reset(orientation ?: RecyclerView.VERTICAL, divider, showLastDivider).let { if (it) invalidateItemDecorations() }
+            found = true
+            break
+        }
+    }
+    if (!found) {
+        addItemDecoration(LinearLayoutDividerItemDecoration(orientation ?: RecyclerView.VERTICAL, divider, showLastDivider))
     }
 }
 

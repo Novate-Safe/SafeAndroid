@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FlexLayout">
+        <attr name="flex_minWidth" format="dimension" />
+        <attr name="flex_minHeight" format="dimension" />
+        <attr name="flex_maxWidth" format="dimension" />
+        <attr name="flex_maxHeight" format="dimension" />
+        <attr name="flex_targetWidth" format="dimension" />
+        <attr name="flex_targetHeight" format="dimension" />
+    </declare-styleable>
+</resources>

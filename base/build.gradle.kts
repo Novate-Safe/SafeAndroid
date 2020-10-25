@@ -46,7 +46,7 @@ dependencies {
     // Androidx
     implementation("androidx.core:core-ktx:$androidxCoreKtxVersion")
     implementation("androidx.appcompat:appcompat:$androidxAppcompatVersion")
-    implementation("androidx.constraintlayout:constraintlayout:$androidxConstraintlayoutVersion")
+    implementation("androidx.constraintlayout:constraintlayout:$androidxConstraintLayoutVersion")
     implementation("androidx.startup:startup-runtime:$androidxStartupVersion")
 
     // Navigation
