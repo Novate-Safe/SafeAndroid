@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.navigation.NavigationView
 import net.novate.safe.R
 
 /**
@@ -24,7 +23,6 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        view.findViewById<NavigationView>(R.id.navigationView)?.setupWithNavController(navController)
-        view.findViewById<BottomNavigationView>(R.id.bottomNavigationView)?.setupWithNavController(navController)
+        view.findViewById<BottomNavigationView>(R.id.bottomNavigationView).setupWithNavController(navController)
     }
 }
