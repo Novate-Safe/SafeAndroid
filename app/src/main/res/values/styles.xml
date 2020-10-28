@@ -1,13 +1,6 @@
 <resources>
-    <style name="AppTheme.Light" parent="BaseTheme.Light">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-    </style>
 
-    <style name="AppTheme.Night" parent="BaseTheme.Night">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-    </style>
+    <style name="AppTheme.Light" parent="BaseTheme.Light" />
+
+    <style name="AppTheme.Night" parent="BaseTheme.Night" />
 </resources>

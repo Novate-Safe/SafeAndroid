@@ -9,7 +9,6 @@
 
         <!-- Colors -->
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorSecondary">@color/colorSecondary</item>
         <item name="colorTertiary">@color/colorTertiary</item>
         <item name="colorDivider">@color/colorDivider</item>
@@ -44,12 +43,11 @@
     <style name="BaseTheme.Night" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
-        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:windowBackground">@color/colorBackgroundNight</item>
         <item name="android:windowLightStatusBar">false</item>
 
         <!-- Colors -->
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorSecondary">@color/colorSecondary</item>
         <item name="colorTertiary">@color/colorTertiary</item>
         <item name="colorDivider">@color/colorDivider</item>
