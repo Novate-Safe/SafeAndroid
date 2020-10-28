@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- == 颜色 == -->
+    <!-- 主色 -->
+    <color name="colorPrimary">#34343C</color>
+    <!-- 主色（暗） -->
+    <color name="colorPrimaryDark">#34343C</color>
+    <!-- 次色 -->
+    <color name="colorSecondary">#34343C</color>
+    <!-- 次次色 -->
+    <color name="colorTertiary">#34343C</color>
+    <!-- 分割线色 -->
+    <color name="colorDivider">#EEEEEE</color>
+
+    <!-- == 文本颜色 == -->
+    <!-- 文本主色 -->
+    <color name="textColorPrimary">@color/abc_primary_text_material_light</color>
+    <!-- 文本主色（反色） -->
+    <color name="textColorPrimaryInverse">@color/abc_primary_text_material_dark</color>
+    <!-- 文本次色 -->
+    <color name="textColorSecondary">@color/abc_secondary_text_material_light</color>
+    <!-- 文本次色（反色）-->
+    <color name="textColorSecondaryInverse">@color/abc_secondary_text_material_dark</color>
+    <!-- 文本次次色 -->
+    <color name="textColorTertiary">@color/abc_secondary_text_material_light</color>
+    <!-- 文本次次色（反色） -->
+    <color name="textColorTertiaryInverse">@color/abc_secondary_text_material_dark</color>
+    <!-- 文本提示色 -->
+    <color name="textColorHint">@color/abc_hint_foreground_material_light</color>
+    <!-- 文本提示色（反色） -->
+    <color name="textColorHintInverse">@color/abc_hint_foreground_material_dark</color>
+    <!-- 文本高亮色 -->
+    <color name="textColorHighlight">@color/highlighted_text_material_light</color>
+    <!-- 文本高亮色（反色） -->
+    <color name="textColorHighlightInverse">@color/highlighted_text_material_dark</color>
+</resources>

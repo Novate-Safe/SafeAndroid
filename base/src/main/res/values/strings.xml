@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="time_format_hh_mm">HH:mm</string>
+    <string name="time_format_yyyy_mm_dd">yyyy-MM-dd</string>
+    <string name="time_format_yyyy_mm_dd_hh_mm">yyyy-MM-dd HH:mm</string>
+</resources>

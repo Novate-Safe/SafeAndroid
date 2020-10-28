@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!-- 次次色 -->
+    <attr name="colorTertiary" format="color" />
+    <!-- 分割线色 -->
+    <attr name="colorDivider" format="color" />
+
     <declare-styleable name="FlexLayout">
         <attr name="flex_minWidth" format="dimension" />
         <attr name="flex_minHeight" format="dimension" />
