@@ -57,11 +57,11 @@
 
     <!-- == 背景色（用于页面主体背景，比如卡片，浮窗，列表项） == -->
     <!-- 背景主色(0E0E0E+2%透明度纯白) -->
-    <color name="colorBackgroundPrimaryNight">#131313</color>
+    <color name="colorBackgroundPrimaryNight">#1E1E1E</color>
     <!-- 背景次色(0E0E0E+4%透明度纯白) -->
-    <color name="colorBackgroundSecondaryNight">#181818</color>
+    <color name="colorBackgroundSecondaryNight">#232323</color>
     <!-- 背景次次色(0E0E0E+6%透明度纯白) -->
-    <color name="colorBackgroundTertiaryNight">#1C1C1C</color>
+    <color name="colorBackgroundTertiaryNight">#272727</color>
 
     <!-- == 文本色 == -->
     <!-- 文本主色 -->
@@ -89,5 +89,5 @@
     <!-- 分割线色 -->
     <color name="colorDividerNight">#EEEEEE</color>
     <!-- 窗口背景色 -->
-    <color name="colorWindowBackgroundNight">#0E0E0E</color>
+    <color name="colorWindowBackgroundNight">#121212</color>
 </resources>

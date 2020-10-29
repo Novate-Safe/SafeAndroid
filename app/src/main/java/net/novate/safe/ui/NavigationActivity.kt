@@ -33,7 +33,15 @@ class NavigationActivity : AppCompatActivity() {
 // 颜色计算小工具
 fun printColor() {
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-        println("Color = ${("#0E0E0E".toColor() + Color.valueOf(1f, 1f, 1f, 0.06f)).toArgbString()}")
+        // 背景色
+        println("Color = ${("#121212".toColor() + Color.valueOf(1f, 1f, 1f, 0.05f)).toArgbString()}")
+        println("Color = ${("#121212".toColor() + Color.valueOf(1f, 1f, 1f, 0.07f)).toArgbString()}")
+        println("Color = ${("#121212".toColor() + Color.valueOf(1f, 1f, 1f, 0.09f)).toArgbString()}")
+
+        // 文字色
+        println("Color = ${Color.valueOf(1f, 1f, 1f, 0.87f).toArgbString()}")
+        println("Color = ${Color.valueOf(1f, 1f, 1f, 0.60f).toArgbString()}")
+        println("Color = ${Color.valueOf(1f, 1f, 1f, 0.38f).toArgbString()}")
     }
 }
 

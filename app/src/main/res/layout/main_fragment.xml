@@ -20,7 +20,9 @@
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/white"
+        android:background="?attr/colorBackgroundPrimary"
+        app:itemIconTint="?android:attr/textColorPrimary"
+        app:itemTextColor="?android:attr/textColorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/main_menu" />
 
