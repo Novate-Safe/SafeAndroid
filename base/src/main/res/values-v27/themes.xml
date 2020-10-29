@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="BaseTheme.Compat.Light" parent="BaseTheme.Light">
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+
+    <style name="BaseTheme.Compat.Night" parent="BaseTheme.Night">
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+</resources>

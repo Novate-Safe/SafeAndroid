@@ -1,6 +1,0 @@
-<resources>
-
-    <style name="AppTheme.Light" parent="BaseTheme.Light" />
-
-    <style name="AppTheme.Night" parent="BaseTheme.Night" />
-</resources>

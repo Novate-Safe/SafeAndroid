@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 基础主题 -->
+    <style name="BaseTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+
+        <!-- Text Appearance -->
+        <item name="textAppearanceHeadline1">@style/BaseTextAppearance.Headline1</item>
+        <item name="textAppearanceHeadline2">@style/BaseTextAppearance.Headline2</item>
+        <item name="textAppearanceHeadline3">@style/BaseTextAppearance.Headline3</item>
+        <item name="textAppearanceHeadline4">@style/BaseTextAppearance.Headline4</item>
+        <item name="textAppearanceHeadline5">@style/BaseTextAppearance.Headline5</item>
+        <item name="textAppearanceHeadline6">@style/BaseTextAppearance.Headline6</item>
+
+        <item name="textAppearanceSubtitle1">@style/BaseTextAppearance.Subtitle1</item>
+        <item name="textAppearanceSubtitle1.Primary">@style/BaseTextAppearance.Subtitle1.Primary</item>
+        <item name="textAppearanceSubtitle1.PrimaryInverse">@style/BaseTextAppearance.Subtitle1.PrimaryInverse</item>
+        <item name="textAppearanceSubtitle1.Secondary">@style/BaseTextAppearance.Subtitle1.Secondary</item>
+        <item name="textAppearanceSubtitle1.SecondaryInverse">@style/BaseTextAppearance.Subtitle1.SecondaryInverse</item>
+        <item name="textAppearanceSubtitle1.Tertiary">@style/BaseTextAppearance.Subtitle1.Tertiary</item>
+        <item name="textAppearanceSubtitle1.TertiaryInverse">@style/BaseTextAppearance.Subtitle1.TertiaryInverse</item>
+
+        <item name="textAppearanceSubtitle2">@style/BaseTextAppearance.Subtitle2</item>
+        <item name="textAppearanceSubtitle2.Primary">@style/BaseTextAppearance.Subtitle2.Primary</item>
+        <item name="textAppearanceSubtitle2.PrimaryInverse">@style/BaseTextAppearance.Subtitle2.PrimaryInverse</item>
+        <item name="textAppearanceSubtitle2.Secondary">@style/BaseTextAppearance.Subtitle2.Secondary</item>
+        <item name="textAppearanceSubtitle2.SecondaryInverse">@style/BaseTextAppearance.Subtitle2.SecondaryInverse</item>
+        <item name="textAppearanceSubtitle2.Tertiary">@style/BaseTextAppearance.Subtitle2.Tertiary</item>
+        <item name="textAppearanceSubtitle2.TertiaryInverse">@style/BaseTextAppearance.Subtitle2.TertiaryInverse</item>
+
+        <item name="textAppearanceBody1">@style/BaseTextAppearance.Body1</item>
+        <item name="textAppearanceBody1.Primary">@style/BaseTextAppearance.Body1.Primary</item>
+        <item name="textAppearanceBody1.PrimaryInverse">@style/BaseTextAppearance.Body1.PrimaryInverse</item>
+        <item name="textAppearanceBody1.Secondary">@style/BaseTextAppearance.Body1.Secondary</item>
+        <item name="textAppearanceBody1.SecondaryInverse">@style/BaseTextAppearance.Body1.SecondaryInverse</item>
+        <item name="textAppearanceBody1.Tertiary">@style/BaseTextAppearance.Body1.Tertiary</item>
+        <item name="textAppearanceBody1.TertiaryInverse">@style/BaseTextAppearance.Body1.TertiaryInverse</item>
+
+        <item name="textAppearanceBody2">@style/BaseTextAppearance.Body2</item>
+        <item name="textAppearanceBody2.Primary">@style/BaseTextAppearance.Body2.Primary</item>
+        <item name="textAppearanceBody2.PrimaryInverse">@style/BaseTextAppearance.Body2.PrimaryInverse</item>
+        <item name="textAppearanceBody2.Secondary">@style/BaseTextAppearance.Body2.Secondary</item>
+        <item name="textAppearanceBody2.SecondaryInverse">@style/BaseTextAppearance.Body2.SecondaryInverse</item>
+        <item name="textAppearanceBody2.Tertiary">@style/BaseTextAppearance.Body2.Tertiary</item>
+        <item name="textAppearanceBody2.TertiaryInverse">@style/BaseTextAppearance.Body2.TertiaryInverse</item>
+
+        <item name="textAppearanceButton">@style/BaseTextAppearance.Button</item>
+        <item name="textAppearanceCaption">@style/BaseTextAppearance.Caption</item>
+        <item name="textAppearanceOverline">@style/BaseTextAppearance.Overline</item>
+
+    </style>
+
+    <!-- 浅色主题 -->
+    <style name="BaseTheme.Light" parent="BaseTheme">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowBackground">@color/colorWindowBackground</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+        <!-- 品牌色 -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorTertiary">@color/colorTertiary</item>
+
+        <!-- 背景色 -->
+        <item name="colorBackgroundPrimary">@color/colorBackgroundPrimary</item>
+        <item name="colorBackgroundSecondary">@color/colorBackgroundSecondary</item>
+        <item name="colorBackgroundTertiary">@color/colorBackgroundTertiary</item>
+
+        <!-- 文本色 -->
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+        <item name="android:textColorPrimaryInverse">@color/textColorPrimaryInverse</item>
+        <item name="android:textColorSecondary">@color/textColorSecondary</item>
+        <item name="android:textColorSecondaryInverse">@color/textColorSecondaryInverse</item>
+        <item name="android:textColorTertiary">@color/textColorTertiary</item>
+        <item name="android:textColorHint">@color/textColorHint</item>
+        <item name="android:textColorHintInverse">@color/textColorHintInverse</item>
+        <item name="android:textColorHighlight">@color/textColorHighlight</item>
+        <item name="android:textColorHighlightInverse">@color/textColorHighlightInverse</item>
+
+        <!-- 其他色-->
+        <item name="colorDivider">@color/colorDivider</item>
+
+    </style>
+
+    <!-- 深色主题 -->
+    <style name="BaseTheme.Night" parent="BaseTheme">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowBackground">@color/colorWindowBackgroundNight</item>
+        <item name="android:windowLightStatusBar">false</item>
+
+        <!-- 品牌色 -->
+        <item name="colorPrimary">@color/colorPrimaryNight</item>
+        <item name="colorSecondary">@color/colorSecondaryNight</item>
+        <item name="colorTertiary">@color/colorTertiaryNight</item>
+
+        <!-- 背景色 -->
+        <item name="colorBackgroundPrimary">@color/colorBackgroundPrimaryNight</item>
+        <item name="colorBackgroundSecondary">@color/colorBackgroundSecondaryNight</item>
+        <item name="colorBackgroundTertiary">@color/colorBackgroundTertiaryNight</item>
+
+        <!-- 文本色 -->
+        <item name="android:textColorPrimary">@color/textColorPrimaryNight</item>
+        <item name="android:textColorPrimaryInverse">@color/textColorPrimaryInverseNight</item>
+        <item name="android:textColorSecondary">@color/textColorSecondaryNight</item>
+        <item name="android:textColorSecondaryInverse">@color/textColorSecondaryInverseNight</item>
+        <item name="android:textColorTertiary">@color/textColorTertiaryNight</item>
+        <item name="android:textColorHint">@color/textColorHintNight</item>
+        <item name="android:textColorHintInverse">@color/textColorHintInverseNight</item>
+        <item name="android:textColorHighlight">@color/textColorHighlightNight</item>
+        <item name="android:textColorHighlightInverse">@color/textColorHighlightInverseNight</item>
+
+        <!-- 其他色-->
+        <item name="colorDivider">@color/colorDividerNight</item>
+
+    </style>
+
+    <style name="BaseTheme.Compat.Light" parent="BaseTheme.Light" />
+
+    <style name="BaseTheme.Compat.Night" parent="BaseTheme.Night" />
+</resources>

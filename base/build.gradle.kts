@@ -79,6 +79,9 @@ dependencies {
     // Timber
     implementation("com.jakewharton.timber:timber:$timberVersion")
 
+    // Okio
+    implementation("com.squareup.okio:okio:$okioVersion")
+
     // ReactiveX
     implementation("io.reactivex.rxjava3:rxjava:$rxJava3Version")
     implementation("io.reactivex.rxjava3:rxkotlin:$rxKotlin3Version")

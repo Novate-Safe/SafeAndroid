@@ -1,111 +1,149 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="BaseTheme.Light" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:navigationBarColor">@android:color/transparent</item>
-        <item name="android:windowBackground">@android:color/white</item>
-        <item name="android:windowLightStatusBar">true</item>
-
-        <!-- Colors -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorSecondary">@color/colorSecondary</item>
-        <item name="colorTertiary">@color/colorTertiary</item>
-        <item name="colorDivider">@color/colorDivider</item>
-
-        <!-- Text Colors -->
-        <item name="android:textColorPrimary">@color/textColorPrimary</item>
-        <item name="android:textColorPrimaryInverse">@color/textColorPrimaryInverse</item>
-        <item name="android:textColorSecondary">@color/textColorSecondary</item>
-        <item name="android:textColorSecondaryInverse">@color/textColorSecondaryInverse</item>
-        <item name="android:textColorTertiary">@color/textColorTertiary</item>
-        <item name="android:textColorHint">@color/textColorHint</item>
-        <item name="android:textColorHintInverse">@color/textColorHintInverse</item>
-        <item name="android:textColorHighlight">@color/textColorHighlight</item>
-        <item name="android:textColorHighlightInverse">@color/textColorHighlightInverse</item>
-
-        <!-- Text Appearance -->
-        <item name="textAppearanceHeadline1">@style/BaseTextAppearance.Headline1</item>
-        <item name="textAppearanceHeadline2">@style/BaseTextAppearance.Headline2</item>
-        <item name="textAppearanceHeadline3">@style/BaseTextAppearance.Headline3</item>
-        <item name="textAppearanceHeadline4">@style/BaseTextAppearance.Headline4</item>
-        <item name="textAppearanceHeadline5">@style/BaseTextAppearance.Headline5</item>
-        <item name="textAppearanceHeadline6">@style/BaseTextAppearance.Headline6</item>
-        <item name="textAppearanceSubtitle1">@style/BaseTextAppearance.Subtitle1</item>
-        <item name="textAppearanceSubtitle2">@style/BaseTextAppearance.Subtitle2</item>
-        <item name="textAppearanceBody1">@style/BaseTextAppearance.Body1</item>
-        <item name="textAppearanceBody2">@style/BaseTextAppearance.Body2</item>
-        <item name="textAppearanceButton">@style/BaseTextAppearance.Button</item>
-        <item name="textAppearanceCaption">@style/BaseTextAppearance.Caption</item>
-        <item name="textAppearanceOverline">@style/BaseTextAppearance.Overline</item>
-    </style>
-
-    <style name="BaseTheme.Night" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <item name="android:statusBarColor">@android:color/transparent</item>
-        <item name="android:navigationBarColor">@android:color/transparent</item>
-        <item name="android:windowBackground">@color/colorBackgroundNight</item>
-        <item name="android:windowLightStatusBar">false</item>
-
-        <!-- Colors -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorSecondary">@color/colorSecondary</item>
-        <item name="colorTertiary">@color/colorTertiary</item>
-        <item name="colorDivider">@color/colorDivider</item>
-
-        <!-- Text Colors -->
-        <item name="android:textColorPrimary">@color/textColorPrimary</item>
-        <item name="android:textColorPrimaryInverse">@color/textColorPrimaryInverse</item>
-        <item name="android:textColorSecondary">@color/textColorSecondary</item>
-        <item name="android:textColorSecondaryInverse">@color/textColorSecondaryInverse</item>
-        <item name="android:textColorTertiary">@color/textColorTertiary</item>
-        <item name="android:textColorHint">@color/textColorHint</item>
-        <item name="android:textColorHintInverse">@color/textColorHintInverse</item>
-        <item name="android:textColorHighlight">@color/textColorHighlight</item>
-        <item name="android:textColorHighlightInverse">@color/textColorHighlightInverse</item>
-
-        <!-- Text Appearance -->
-        <item name="textAppearanceHeadline1">@style/BaseTextAppearance.Headline1</item>
-        <item name="textAppearanceHeadline2">@style/BaseTextAppearance.Headline2</item>
-        <item name="textAppearanceHeadline3">@style/BaseTextAppearance.Headline3</item>
-        <item name="textAppearanceHeadline4">@style/BaseTextAppearance.Headline4</item>
-        <item name="textAppearanceHeadline5">@style/BaseTextAppearance.Headline5</item>
-        <item name="textAppearanceHeadline6">@style/BaseTextAppearance.Headline6</item>
-        <item name="textAppearanceSubtitle1">@style/BaseTextAppearance.Subtitle1</item>
-        <item name="textAppearanceSubtitle2">@style/BaseTextAppearance.Subtitle2</item>
-        <item name="textAppearanceBody1">@style/BaseTextAppearance.Body1</item>
-        <item name="textAppearanceBody2">@style/BaseTextAppearance.Body2</item>
-        <item name="textAppearanceButton">@style/BaseTextAppearance.Button</item>
-        <item name="textAppearanceCaption">@style/BaseTextAppearance.Caption</item>
-        <item name="textAppearanceOverline">@style/BaseTextAppearance.Overline</item>
-
-    </style>
-
     <style name="BaseTextAppearance" />
 
+    <!-- H1 96sp -->
     <style name="BaseTextAppearance.Headline1" parent="TextAppearance.MaterialComponents.Headline1" />
 
+    <!-- H2 60sp -->
     <style name="BaseTextAppearance.Headline2" parent="TextAppearance.MaterialComponents.Headline2" />
 
+    <!-- H3 48sp -->
     <style name="BaseTextAppearance.Headline3" parent="TextAppearance.MaterialComponents.Headline3" />
 
+    <!-- H4 34sp -->
     <style name="BaseTextAppearance.Headline4" parent="TextAppearance.MaterialComponents.Headline4" />
 
+    <!-- H5 24sp -->
     <style name="BaseTextAppearance.Headline5" parent="TextAppearance.MaterialComponents.Headline5" />
 
+    <!-- H6 20sp -->
     <style name="BaseTextAppearance.Headline6" parent="TextAppearance.MaterialComponents.Headline6" />
 
-    <style name="BaseTextAppearance.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1" />
+    <!-- Subtitle1 16sp -->
+    <style name="BaseTextAppearance.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
 
-    <style name="BaseTextAppearance.Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle2" />
+    <style name="BaseTextAppearance.Subtitle1.Primary" parent="BaseTextAppearance.Subtitle1">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
 
-    <style name="BaseTextAppearance.Body1" parent="TextAppearance.MaterialComponents.Body1" />
+    <style name="BaseTextAppearance.Subtitle1.PrimaryInverse" parent="BaseTextAppearance.Subtitle1">
+        <item name="android:textColor">?android:attr/textColorPrimaryInverse</item>
+    </style>
 
-    <style name="BaseTextAppearance.Body2" parent="TextAppearance.MaterialComponents.Body2" />
+    <style name="BaseTextAppearance.Subtitle1.Secondary" parent="BaseTextAppearance.Subtitle1">
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
 
+    <style name="BaseTextAppearance.Subtitle1.SecondaryInverse" parent="BaseTextAppearance.Subtitle1">
+        <item name="android:textColor">?android:attr/textColorSecondaryInverse</item>
+    </style>
+
+    <style name="BaseTextAppearance.Subtitle1.Tertiary" parent="BaseTextAppearance.Subtitle1">
+        <item name="android:textColor">?android:attr/textColorTertiary</item>
+    </style>
+
+    <style name="BaseTextAppearance.Subtitle1.TertiaryInverse" parent="BaseTextAppearance.Subtitle1">
+        <item name="android:textColor">?android:attr/textColorTertiaryInverse</item>
+    </style>
+
+    <!-- Subtitle2 14sp -->
+    <style name="BaseTextAppearance.Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="BaseTextAppearance.Subtitle2.Primary" parent="BaseTextAppearance.Subtitle2">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="BaseTextAppearance.Subtitle2.PrimaryInverse" parent="BaseTextAppearance.Subtitle2">
+        <item name="android:textColor">?android:attr/textColorPrimaryInverse</item>
+    </style>
+
+    <style name="BaseTextAppearance.Subtitle2.Secondary" parent="BaseTextAppearance.Subtitle2">
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+
+    <style name="BaseTextAppearance.Subtitle2.SecondaryInverse" parent="BaseTextAppearance.Subtitle2">
+        <item name="android:textColor">?android:attr/textColorSecondaryInverse</item>
+    </style>
+
+    <style name="BaseTextAppearance.Subtitle2.Tertiary" parent="BaseTextAppearance.Subtitle2">
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+
+    <style name="BaseTextAppearance.Subtitle2.TertiaryInverse" parent="BaseTextAppearance.Subtitle2">
+        <item name="android:textColor">?android:attr/textColorTertiaryInverse</item>
+    </style>
+
+    <!-- Body1 16sp -->
+    <style name="BaseTextAppearance.Body1" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="BaseTextAppearance.Body1.Primary" parent="BaseTextAppearance.Body1">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="BaseTextAppearance.Body1.PrimaryInverse" parent="BaseTextAppearance.Body1">
+        <item name="android:textColor">?android:attr/textColorPrimaryInverse</item>
+    </style>
+
+    <style name="BaseTextAppearance.Body1.Secondary" parent="BaseTextAppearance.Body1">
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+
+    <style name="BaseTextAppearance.Body1.SecondaryInverse" parent="BaseTextAppearance.Body1">
+        <item name="android:textColor">?android:attr/textColorSecondaryInverse</item>
+    </style>
+
+    <style name="BaseTextAppearance.Body1.Tertiary" parent="BaseTextAppearance.Body1">
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+
+    <style name="BaseTextAppearance.Body1.TertiaryInverse" parent="BaseTextAppearance.Body1">
+        <item name="android:textColor">?android:attr/textColorTertiaryInverse</item>
+    </style>
+
+    <!-- Body2 14sp -->
+    <style name="BaseTextAppearance.Body2" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="BaseTextAppearance.Body2.Primary" parent="BaseTextAppearance.Body2">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="BaseTextAppearance.Body2.PrimaryInverse" parent="BaseTextAppearance.Body2">
+        <item name="android:textColor">?android:attr/textColorPrimaryInverse</item>
+    </style>
+
+    <style name="BaseTextAppearance.Body2.Secondary" parent="BaseTextAppearance.Body2">
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+
+    <style name="BaseTextAppearance.Body2.SecondaryInverse" parent="BaseTextAppearance.Body2">
+        <item name="android:textColor">?android:attr/textColorSecondaryInverse</item>
+    </style>
+
+    <style name="BaseTextAppearance.Body2.Tertiary" parent="BaseTextAppearance.Body2">
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+
+    <style name="BaseTextAppearance.Body2.TertiaryInverse" parent="BaseTextAppearance.Body2">
+        <item name="android:textColor">?android:attr/textColorTertiaryInverse</item>
+    </style>
+
+    <!-- Button 14sp -->
     <style name="BaseTextAppearance.Button" parent="TextAppearance.MaterialComponents.Button" />
 
+    <!-- Caption(注解，说明) 12sp -->
     <style name="BaseTextAppearance.Caption" parent="TextAppearance.MaterialComponents.Caption" />
 
+    <!-- Overline 12sp -->
     <style name="BaseTextAppearance.Overline" parent="TextAppearance.MaterialComponents.Overline" />
 
 </resources>

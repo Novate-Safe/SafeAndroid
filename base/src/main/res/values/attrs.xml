@@ -1,11 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- 次次色 -->
+    <!-- #### 颜色 #### -->
+    <!-- == 品牌色 == -->
+    <!-- 品牌次次色 -->
     <attr name="colorTertiary" format="color" />
+
+    <!-- == 背景色 == -->
+    <!-- 背景主色 -->
+    <attr name="colorBackgroundPrimary" format="color|reference" />
+    <!-- 背景次色 -->
+    <attr name="colorBackgroundSecondary" format="color|reference" />
+    <!-- 背景次次色 -->
+    <attr name="colorBackgroundTertiary" format="color|reference" />
+
+    <!-- == 其他色 == -->
     <!-- 分割线色 -->
     <attr name="colorDivider" format="color" />
 
+    <!-- #### 文本外观 #### -->
+    <!-- Subtitle1 -->
+    <attr name="textAppearanceSubtitle1.Primary" format="reference" />
+    <attr name="textAppearanceSubtitle1.PrimaryInverse" format="reference" />
+    <attr name="textAppearanceSubtitle1.Secondary" format="reference" />
+    <attr name="textAppearanceSubtitle1.SecondaryInverse" format="reference" />
+    <attr name="textAppearanceSubtitle1.Tertiary" format="reference" />
+    <attr name="textAppearanceSubtitle1.TertiaryInverse" format="reference" />
+
+    <!-- Subtitle2 -->
+    <attr name="textAppearanceSubtitle2.Primary" format="reference" />
+    <attr name="textAppearanceSubtitle2.PrimaryInverse" format="reference" />
+    <attr name="textAppearanceSubtitle2.Secondary" format="reference" />
+    <attr name="textAppearanceSubtitle2.SecondaryInverse" format="reference" />
+    <attr name="textAppearanceSubtitle2.Tertiary" format="reference" />
+    <attr name="textAppearanceSubtitle2.TertiaryInverse" format="reference" />
+
+    <!-- Body1 -->
+    <attr name="textAppearanceBody1.Primary" format="reference" />
+    <attr name="textAppearanceBody1.PrimaryInverse" format="reference" />
+    <attr name="textAppearanceBody1.Secondary" format="reference" />
+    <attr name="textAppearanceBody1.SecondaryInverse" format="reference" />
+    <attr name="textAppearanceBody1.Tertiary" format="reference" />
+    <attr name="textAppearanceBody1.TertiaryInverse" format="reference" />
+
+    <!-- Body2 -->
+    <attr name="textAppearanceBody2.Primary" format="reference" />
+    <attr name="textAppearanceBody2.PrimaryInverse" format="reference" />
+    <attr name="textAppearanceBody2.Secondary" format="reference" />
+    <attr name="textAppearanceBody2.SecondaryInverse" format="reference" />
+    <attr name="textAppearanceBody2.Tertiary" format="reference" />
+    <attr name="textAppearanceBody2.TertiaryInverse" format="reference" />
+
+    <!-- #### 自定义控件 #### -->
     <declare-styleable name="FlexLayout">
         <attr name="flex_minWidth" format="dimension" />
         <attr name="flex_minHeight" format="dimension" />

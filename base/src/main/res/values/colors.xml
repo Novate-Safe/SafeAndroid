@@ -2,27 +2,33 @@
 <resources>
 
     <!-- #### 浅色主题 #### -->
-    <!-- == 颜色 == -->
-    <!-- 主色 -->
-    <color name="colorPrimary">#34343C</color>
-    <!-- 次色 -->
-    <color name="colorSecondary">#34343C</color>
-    <!-- 次次色 -->
-    <color name="colorTertiary">#34343C</color>
-    <!-- 分割线色 -->
-    <color name="colorDivider">#EEEEEE</color>
+    <!-- == 品牌色（用于主体控件，比如按钮，开关，选择框） == -->
+    <!-- 品牌主色 -->
+    <color name="colorPrimary">#1B1B1B</color>
+    <!-- 品牌次色 -->
+    <color name="colorSecondary">#252525</color>
+    <!-- 品牌次次色 -->
+    <color name="colorTertiary">#2F2F2F</color>
 
-    <!-- == 文本颜色 == -->
+    <!-- == 背景色（用于页面主体背景，比如卡片，浮窗，列表项） == -->
+    <!-- 背景主色 -->
+    <color name="colorBackgroundPrimary">#1B1B1B</color>
+    <!-- 背景次色 -->
+    <color name="colorBackgroundSecondary">#252525</color>
+    <!-- 背景次次色 -->
+    <color name="colorBackgroundTertiary">#2F2F2F</color>
+
+    <!-- == 文本色 == -->
     <!-- 文本主色 -->
-    <color name="textColorPrimary">@color/abc_primary_text_material_light</color>
+    <color name="textColorPrimary">#DEFFFFFF</color>
     <!-- 文本主色（反色） -->
     <color name="textColorPrimaryInverse">@color/abc_primary_text_material_dark</color>
     <!-- 文本次色 -->
-    <color name="textColorSecondary">@color/abc_secondary_text_material_light</color>
+    <color name="textColorSecondary">#99FFFFFF</color>
     <!-- 文本次色（反色）-->
     <color name="textColorSecondaryInverse">@color/abc_secondary_text_material_dark</color>
     <!-- 文本次次色 -->
-    <color name="textColorTertiary">@color/abc_secondary_text_material_light</color>
+    <color name="textColorTertiary">#61FFFFFF</color>
     <!-- 文本次次色（反色） -->
     <color name="textColorTertiaryInverse">@color/abc_secondary_text_material_dark</color>
     <!-- 文本提示色 -->
@@ -34,20 +40,30 @@
     <!-- 文本高亮色（反色） -->
     <color name="textColorHighlightInverse">@color/highlighted_text_material_dark</color>
 
-    <!-- #### 深色主题 #### -->
-    <!-- == 颜色 == -->
-    <!-- 主色 -->
-    <color name="colorPrimaryNight">#1B1B1B</color>
-    <!-- 次色 -->
-    <color name="colorSecondaryNight">#252525</color>
-    <!-- 次次色 -->
-    <color name="colorTertiaryNight">#2F2F2F</color>
+    <!-- == 其他色 == -->
     <!-- 分割线色 -->
-    <color name="colorDividerNight">#EEEEEE</color>
-    <!-- 背景色 -->
-    <color name="colorBackgroundNight">#121212</color>
+    <color name="colorDivider">#EEEEEE</color>
+    <!-- 窗口背景色 -->
+    <color name="colorWindowBackground">#121212</color>
 
-    <!-- == 文本颜色 == -->
+    <!-- #### 深色主题 #### -->
+    <!-- == 品牌色（用于主体控件，比如按钮，开关，选择框） == -->
+    <!-- 品牌主色 -->
+    <color name="colorPrimaryNight">#1B1B1B</color>
+    <!-- 品牌次色 -->
+    <color name="colorSecondaryNight">#252525</color>
+    <!-- 品牌次次色 -->
+    <color name="colorTertiaryNight">#2F2F2F</color>
+
+    <!-- == 背景色（用于页面主体背景，比如卡片，浮窗，列表项） == -->
+    <!-- 背景主色(0E0E0E+2%透明度纯白) -->
+    <color name="colorBackgroundPrimaryNight">#131313</color>
+    <!-- 背景次色(0E0E0E+4%透明度纯白) -->
+    <color name="colorBackgroundSecondaryNight">#181818</color>
+    <!-- 背景次次色(0E0E0E+6%透明度纯白) -->
+    <color name="colorBackgroundTertiaryNight">#1C1C1C</color>
+
+    <!-- == 文本色 == -->
     <!-- 文本主色 -->
     <color name="textColorPrimaryNight">#DEFFFFFF</color>
     <!-- 文本主色（反色） -->
@@ -68,4 +84,10 @@
     <color name="textColorHighlightNight">@color/highlighted_text_material_light</color>
     <!-- 文本高亮色（反色） -->
     <color name="textColorHighlightInverseNight">@color/highlighted_text_material_dark</color>
+
+    <!-- == 其他色 == -->
+    <!-- 分割线色 -->
+    <color name="colorDividerNight">#EEEEEE</color>
+    <!-- 窗口背景色 -->
+    <color name="colorWindowBackgroundNight">#0E0E0E</color>
 </resources>
